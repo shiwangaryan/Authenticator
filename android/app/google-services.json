@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "172612996094",
+    "project_id": "authentication-tutorial-a5d4c",
+    "storage_bucket": "authentication-tutorial-a5d4c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:172612996094:android:03475ad8000440a8790eaf",
+        "android_client_info": {
+          "package_name": "com.authenticationtutorial.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA1ekZnIO9rXxRETjKPuewqii0Ozn9N0as"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
