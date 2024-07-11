@@ -1,21 +1,57 @@
-import 'package:flutter/cupertino.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_authentication/components/sigin_button.dart';
 import 'package:flutter_authentication/components/square_tile.dart';
 import 'package:flutter_authentication/components/textfields.dart';
 
-class MyHomePage extends StatelessWidget {
-  MyHomePage({super.key});
+class LoginPage extends StatelessWidget {
+  LoginPage({super.key});
   final usernameController = TextEditingController();
   final passwordController = TextEditingController();
+  final passwordconfirmController = TextEditingController();
 
   //function to sign in the user
-  void signUserIn() {}
+  void signUserUp(BuildContext context) async {
+    int flag = 0;
+    showDialog(
+        context: context,
+        builder: (context) {
+          return const Center(
+            child: CircularProgressIndicator(),
+          );
+        });
+
+    try {
+      await FirebaseAuth.instance.signInWithEmailAndPassword(
+        email: usernameController.text,
+        password: passwordController.text,
+      );
+      Navigator.pop(context);
+    } on FirebaseAuthException catch (e) {
+      Navigator.pop(context);
+      flag = 1;
+      showDialog(
+        context: context,
+        builder: (context) {
+          return AlertDialog(
+            title: Text(
+              'Wrong Credentials!',
+              style: TextStyle(
+                color: Colors.grey[800],
+                fontSize: 16,
+              ),
+            ),
+          );
+        },
+      );
+    }
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      resizeToAvoidBottomInset: false,
       backgroundColor: Colors.grey[200],
       body: SafeArea(
         child: Column(
@@ -32,7 +68,7 @@ class MyHomePage extends StatelessWidget {
 
             //welcome back!
             Text(
-              'Welcome Back! You have been missed',
+              "Let's create an account for you!",
               style: TextStyle(
                 fontSize: 16,
                 color: Colors.grey[700],
@@ -56,26 +92,18 @@ class MyHomePage extends StatelessWidget {
             ),
             const SizedBox(height: 8),
 
-            //forgot password
-            Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 30.0),
-              child: Row(
-                mainAxisAlignment: MainAxisAlignment.end,
-                children: [
-                  Text(
-                    'Forgot Password?',
-                    style: TextStyle(
-                      color: Colors.grey[600],
-                    ),
-                  ),
-                ],
-              ),
+            //confirm passowrd
+            MyTextFields(
+              hint: 'Re-enter password *',
+              obscureText: true,
+              controller: passwordconfirmController,
             ),
-            const SizedBox(height: 20),
+            const SizedBox(height: 30),
 
             //sigin button
             SigninButton(
-              onTap: signUserIn,
+              title: 'Sign Up',
+              onTap: () => signUserUp(context),
             ),
             const SizedBox(height: 40),
 
@@ -119,17 +147,17 @@ class MyHomePage extends StatelessWidget {
             ),
             const SizedBox(height: 40),
 
-            //not a member? register now
+            //already a member? sign in
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  'Not a member?',
+                  'Already a member?',
                   style: TextStyle(color: Colors.grey[700]),
                 ),
                 const SizedBox(width: 5),
                 const Text(
-                  'Register Now',
+                  'Login now',
                   style: TextStyle(
                     color: Colors.blue,
                     fontWeight: FontWeight.bold,

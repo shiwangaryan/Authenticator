@@ -41,46 +41,47 @@ class DefaultFirebaseOptions {
   }
 
   static const FirebaseOptions web = FirebaseOptions(
-    apiKey: 'AIzaSyBz2kt9W6Me407ltOjrIPezD4o60_XWmLg',
-    appId: '1:172612996094:web:a4f4b895655b995e790eaf',
-    messagingSenderId: '172612996094',
-    projectId: 'authentication-tutorial-a5d4c',
-    authDomain: 'authentication-tutorial-a5d4c.firebaseapp.com',
-    storageBucket: 'authentication-tutorial-a5d4c.appspot.com',
+    apiKey: 'AIzaSyAF68QDTlucS5g9kdMrjtD00RIFB7EowQs',
+    appId: '1:778532300966:web:691b1334a27ca85c9fec67',
+    messagingSenderId: '778532300966',
+    projectId: 'authentication-c1756',
+    authDomain: 'authentication-c1756.firebaseapp.com',
+    storageBucket: 'authentication-c1756.appspot.com',
   );
 
   static const FirebaseOptions android = FirebaseOptions(
-    apiKey: 'AIzaSyA1ekZnIO9rXxRETjKPuewqii0Ozn9N0as',
-    appId: '1:172612996094:android:03475ad8000440a8790eaf',
-    messagingSenderId: '172612996094',
-    projectId: 'authentication-tutorial-a5d4c',
-    storageBucket: 'authentication-tutorial-a5d4c.appspot.com',
+    apiKey: 'AIzaSyD5VPUaStFT5byY5mXgFdmC0GRvHpksuMQ',
+    appId: '1:778532300966:android:7865f971aaf9f9059fec67',
+    messagingSenderId: '778532300966',
+    projectId: 'authentication-c1756',
+    storageBucket: 'authentication-c1756.appspot.com',
   );
 
   static const FirebaseOptions ios = FirebaseOptions(
-    apiKey: 'AIzaSyBE2dZA-CD1PH7oe7xqPBrNl5P1KC5rowI',
-    appId: '1:172612996094:ios:5ebcc32e7815eac4790eaf',
-    messagingSenderId: '172612996094',
-    projectId: 'authentication-tutorial-a5d4c',
-    storageBucket: 'authentication-tutorial-a5d4c.appspot.com',
+    apiKey: 'AIzaSyCfId4Z94Eq3ka68bTIkeah3NnJ1sYWWnE',
+    appId: '1:778532300966:ios:25da48792a0864ae9fec67',
+    messagingSenderId: '778532300966',
+    projectId: 'authentication-c1756',
+    storageBucket: 'authentication-c1756.appspot.com',
     iosBundleId: 'com.example.flutterAuthentication',
   );
 
   static const FirebaseOptions macos = FirebaseOptions(
-    apiKey: 'AIzaSyBE2dZA-CD1PH7oe7xqPBrNl5P1KC5rowI',
-    appId: '1:172612996094:ios:5ebcc32e7815eac4790eaf',
-    messagingSenderId: '172612996094',
-    projectId: 'authentication-tutorial-a5d4c',
-    storageBucket: 'authentication-tutorial-a5d4c.appspot.com',
+    apiKey: 'AIzaSyCfId4Z94Eq3ka68bTIkeah3NnJ1sYWWnE',
+    appId: '1:778532300966:ios:25da48792a0864ae9fec67',
+    messagingSenderId: '778532300966',
+    projectId: 'authentication-c1756',
+    storageBucket: 'authentication-c1756.appspot.com',
     iosBundleId: 'com.example.flutterAuthentication',
   );
 
   static const FirebaseOptions windows = FirebaseOptions(
-    apiKey: 'AIzaSyBz2kt9W6Me407ltOjrIPezD4o60_XWmLg',
-    appId: '1:172612996094:web:97e8c09d63ca4127790eaf',
-    messagingSenderId: '172612996094',
-    projectId: 'authentication-tutorial-a5d4c',
-    authDomain: 'authentication-tutorial-a5d4c.firebaseapp.com',
-    storageBucket: 'authentication-tutorial-a5d4c.appspot.com',
+    apiKey: 'AIzaSyAF68QDTlucS5g9kdMrjtD00RIFB7EowQs',
+    appId: '1:778532300966:web:2a2e126d1d6e40c49fec67',
+    messagingSenderId: '778532300966',
+    projectId: 'authentication-c1756',
+    authDomain: 'authentication-c1756.firebaseapp.com',
+    storageBucket: 'authentication-c1756.appspot.com',
   );
+
 }

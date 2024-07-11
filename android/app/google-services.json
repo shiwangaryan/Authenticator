@@ -1,21 +1,21 @@
 {
   "project_info": {
-    "project_number": "172612996094",
-    "project_id": "authentication-tutorial-a5d4c",
-    "storage_bucket": "authentication-tutorial-a5d4c.appspot.com"
+    "project_number": "778532300966",
+    "project_id": "authentication-c1756",
+    "storage_bucket": "authentication-c1756.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:172612996094:android:03475ad8000440a8790eaf",
+        "mobilesdk_app_id": "1:778532300966:android:7865f971aaf9f9059fec67",
         "android_client_info": {
-          "package_name": "com.authenticationtutorial.app"
+          "package_name": "com.example.flutter_authentication"
         }
       },
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyA1ekZnIO9rXxRETjKPuewqii0Ozn9N0as"
+          "current_key": "AIzaSyD5VPUaStFT5byY5mXgFdmC0GRvHpksuMQ"
         }
       ],
       "services": {
